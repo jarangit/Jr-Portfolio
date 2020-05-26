@@ -6,6 +6,7 @@ const NavbarItem = styled.div`
     ul{
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         li{
             list-style: none;
             a{

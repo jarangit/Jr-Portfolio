@@ -2,6 +2,7 @@ import Link from "next/link"
 import styled from 'styled-components'
 
 const MenuItem = styled.div`
+    padding: 0 50px;
     display:flex;
     justify-content: space-between;
     align-items: baseline;
