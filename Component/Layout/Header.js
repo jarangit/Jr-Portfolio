@@ -29,8 +29,6 @@ const Header = (props) => {
         <Container>
             <Text>
                 <h1>HI I'M JARAN</h1>
-                {/* <h1> {props.dataApi.name} </h1>
-                <p> {props.dataApi.content} </p> */}
                 <Link href = '/' >
                     <a> MY CV </a>
                 </Link>

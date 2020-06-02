@@ -2,6 +2,8 @@ import Layout from "../Component/Layout/Layout"
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import styled from 'styled-components'
 import Link from 'next/link'
+import ModalMyBook from "../Component/ModalMyBook";
+import { useEffect, useState } from 'react'
 
 
 //styled
@@ -23,22 +25,46 @@ const Block = styled.div`
 `
 //end styed
 
-
 const MyBook = ({data}) => {
-    MyBook.getInitialProps = async (ctx) => {
-        const res = await fetch(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.ACCESS_TOKEN}&content_type=mySet`)
-        const json = await res.json()
-        return { data: json}
-      }
-    console.log(data)
+
+
+    const [openModal, SetOpenModal] = useState(true)  
+    const [idItem, SetIdItem] = useState(null)
+
+    const FuncOpenModal = () => {
+        SetOpenModal(!openModal)
+    }
+    const ClickSendIdItem = (e) => {
+        FuncOpenModal()
+        const FindId = e.currentTarget.id
+        console.log(FindId)
+        data.items.map(FindIdItem => {
+            if(FindId === FindIdItem.sys.id){
+                SetIdItem(FindIdItem.fields)
+            } else 'no'
+        })
+        
+    }
+    console.log(idItem)
+    
     return(
         <Layout>
             <Container>
+            <h1>My Book</h1>
        {data.items.map(items => {
-         console.log(items.fields.title)
+        // const [idItem, SetIdItem] = useState("123")
+        // console.log(idItem)
+        // const FuncSendIdItem = () => {
+        //     // SetIdItem(items.sys.id)
+        // }
+        // const onClickMulti = () => {
+        //     FuncOpenModal()
+        //     FuncSendIdItem()
+        // }
+        // console.log(items.sys.id)
          return(
-        <Block>
-             <Link href = "/">
+        <Block onClick = {ClickSendIdItem} id = {items.sys.id}>
+             <Link href = "#">
                <a>
                <BlockContent>
                     <h2> {items.fields.title} </h2>
@@ -50,8 +76,14 @@ const MyBook = ({data}) => {
          )
        })}
             </Container>
+            <ModalMyBook valueClick = {openModal} onClose={FuncOpenModal} valueContent = {idItem}/>
         </Layout>
     )
 }
 
+MyBook.getInitialProps = async (ctx) => {
+    const res = await fetch(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.ACCESS_TOKEN}&content_type=mySet`)
+    const json = await res.json()
+    return { data: json}
+  }
 export default MyBook
