@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>Jr</title>
-          <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet"></link>
+          <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet"></link>
         </Head>
         <body>
           <Main />
