@@ -24,15 +24,13 @@ const Text = styled.div`
     }
 `
 
-const Header = () => {
+const Header = (props) => {
     return(
         <Container>
             <Text>
                 <h1>HI I'M JARAN</h1>
-                <h1>I AM WEB PROGRAMER</h1>
-                <p>Next.js can serve static files, like images, under a folder called public in the root directory. Files inside public can then be referenced by your code starting from the base URL (/).</p>
                 <Link href = '/' >
-                    <a> MY CSV </a>
+                    <a> MY CV </a>
                 </Link>
             </Text>
             <img src="/Image/Header.jpg" width='100%'/>

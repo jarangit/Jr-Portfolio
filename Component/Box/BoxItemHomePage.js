@@ -38,7 +38,17 @@ const BoxItemHomePage = () => {
                     <a>
                        <Container>
                             <Text>
-                                <h1> My Project </h1>
+                                <h1> MY PROJECT </h1>
+                            </Text>
+                            <img src="/Image/Header.jpg" width='100%'/>
+                       </Container>
+                    </a>
+             </Link>
+             <Link href = "/MyBook" >
+                    <a>
+                       <Container>
+                            <Text>
+                                <h1> MY BOOK </h1>
                             </Text>
                             <img src="/Image/Header.jpg" width='100%'/>
                        </Container>
@@ -48,7 +58,7 @@ const BoxItemHomePage = () => {
                     <a>
                        <Container>
                             <Text>
-                                <h1> My Project </h1>
+                                <h1> MY GALLERY </h1>
                             </Text>
                             <img src="/Image/Header.jpg" width='100%'/>
                        </Container>
@@ -58,7 +68,7 @@ const BoxItemHomePage = () => {
                     <a>
                        <Container>
                             <Text>
-                                <h1> My Project </h1>
+                                <h1> MY SONG </h1>
                             </Text>
                             <img src="/Image/Header.jpg" width='100%'/>
                        </Container>
@@ -68,7 +78,7 @@ const BoxItemHomePage = () => {
                     <a>
                        <Container>
                             <Text>
-                                <h1> My Project </h1>
+                                <h1> MY ACTIVITY </h1>
                             </Text>
                             <img src="/Image/Header.jpg" width='100%'/>
                        </Container>
@@ -78,17 +88,7 @@ const BoxItemHomePage = () => {
                     <a>
                        <Container>
                             <Text>
-                                <h1> My Project </h1>
-                            </Text>
-                            <img src="/Image/Header.jpg" width='100%'/>
-                       </Container>
-                    </a>
-             </Link>
-             <Link href = "/" >
-                    <a>
-                       <Container>
-                            <Text>
-                                <h1> My Project </h1>
+                                <h1> MY BUSINESS </h1>
                             </Text>
                             <img src="/Image/Header.jpg" width='100%'/>
                        </Container>
