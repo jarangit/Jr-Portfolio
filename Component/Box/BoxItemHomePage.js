@@ -6,6 +6,8 @@ const BoxItem = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 100px;
+    max-width: 1280px;
+    margin: 0 auto;
     a{
         text-decoration: none;
         margin: 10px;
