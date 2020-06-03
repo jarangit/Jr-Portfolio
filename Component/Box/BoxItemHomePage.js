@@ -34,7 +34,7 @@ const Text = styled.div`
 const BoxItemHomePage = () => {
     return(
         <BoxItem>
-             <Link href = "/" >
+             <Link href = "/MyProject" >
                     <a>
                        <Container>
                             <Text>
@@ -54,7 +54,7 @@ const BoxItemHomePage = () => {
                        </Container>
                     </a>
              </Link>
-             <Link href = "/" >
+             <Link href = "/MyGallery" >
                     <a>
                        <Container>
                             <Text>
@@ -84,8 +84,7 @@ const BoxItemHomePage = () => {
                        </Container>
                     </a>
              </Link>
-             <Link href = "/" >
-                    <a>
+                    <a href = "https://www.abk-store.com/" target = "bank">
                        <Container>
                             <Text>
                                 <h1> MY BUSINESS </h1>
@@ -93,7 +92,6 @@ const BoxItemHomePage = () => {
                             <img src="/Image/Header.jpg" width='100%'/>
                        </Container>
                     </a>
-             </Link>
         </BoxItem>
     )
 }
