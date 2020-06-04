@@ -2,7 +2,7 @@ import Layout from "../Component/Layout/Layout"
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import styled from 'styled-components'
 import Link from 'next/link'
-import ShowImage from "../Component/ShowImage";
+import ShowImage from "../Component/Layout/ShowImage/ShowImage";
 
 
 const Block = styled.div`
