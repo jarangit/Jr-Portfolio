@@ -2,7 +2,16 @@ import Layout from "../Component/Layout/Layout"
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import styled from 'styled-components'
 import Link from 'next/link'
-import ShowImage from "../Component/ShowImage";
+import ShowImage from "../Component/Layout/ShowImage/ShowImage";
+
+
+const Block = styled.div`
+    border: solid;
+    margin: 20px 0;
+    img{
+        width: 200px;
+    }
+`
 
 const MyProject = ({data}) => {
     console.log(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/4NAR7Mm1KAmYJUS8qQYbUm?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
@@ -11,16 +20,19 @@ const MyProject = ({data}) => {
            <div className = "container" >
                 <div>
                     {data.items.map(items => {
+<<<<<<< HEAD
                         // console.log(items)
+=======
+                        // console.log(items.fields.image.sys.id)
+>>>>>>> 64632ca052302dd5ed2e3ffa99a68758ec438f30
                         return(
-                            <div>
+                            <Block>
                                 <h3> {items.fields.name} </h3>
+                                <ShowImage  assetsId = {items.fields.image.sys.id}/>
                                 <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.descriptions)}}></div>           
                                 <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.tools)}}></div>
                                 <a href = {items.fields.url} target = "bank"> {items.fields.url} </a>
-                                <ShowImage  assetsId = ''/>
-                                <img src = 'http://images.ctfassets.net/mhf3i20liehl/4NAR7Mm1KAmYJUS8qQYbUm/a5adcb29ece96f7eb8736f336f71e4bf/iTopPlus1363848030118.png' />
-                            </div>
+                            </Block>
                         )
                     })}
                 </div>

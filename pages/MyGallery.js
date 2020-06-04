@@ -1,11 +1,41 @@
-function MyGallery({ stars }) {
-    return <div>Next stars: {stars}</div>
+import Layout from "../Component/Layout/Layout"
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+import styled from 'styled-components'
+import ShowImageGallery from "../Component/Layout/ShowImage/ShowImageGallery";
+
+
+const Block = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  img{
+    width: 200px;
+    vertical-align: middle;
+
   }
-  
+`
+function MyGallery({ data }) {
+    return (
+      <Layout>
+       <div className = "container">
+        {data.items.map(items => {
+            return(
+              <div key = {items.fields.name}>
+              <h2> {items.fields.name} </h2>
+                   <Block>
+                     <ShowImageGallery dataImg = {items.fields}/>
+                  </Block>
+              </div>
+            )
+          })}
+       </div>
+      </Layout>
+    )
+  }
   MyGallery.getInitialProps = async (ctx) => {
-    const res = await fetch('https://api.github.com/repos/vercel/next.js')
+    const res = await fetch(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.ACCESS_TOKEN}&content_type=post`)
     const json = await res.json()
-    return { stars: json.stargazers_count }
+    return { data: json}
   }
   
   export default MyGallery

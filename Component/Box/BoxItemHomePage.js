@@ -64,7 +64,7 @@ const BoxItemHomePage = () => {
                        </Container>
                     </a>
              </Link>
-             <Link href = "/" >
+             <Link href = "/MySong" >
                     <a>
                        <Container>
                             <Text>
@@ -74,7 +74,7 @@ const BoxItemHomePage = () => {
                        </Container>
                     </a>
              </Link>
-             <Link href = "/" >
+             <Link href = "/MyActivity" >
                     <a>
                        <Container>
                             <Text>
