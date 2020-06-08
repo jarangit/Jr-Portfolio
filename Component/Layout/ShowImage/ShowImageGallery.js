@@ -7,20 +7,11 @@ const  ShowImage = (props) => {
    
 
     const [dataCol1, setDataCol1] = useState([]);
-    const [IdImg, setIdImg] = useState('ยังอะ');
+    const [IdImg, setIdImg] = useState([]);
     const [load, setLoad] = useState(false);
     const [error, setError] = useState('');
     
-    const MapId = () => {
-        return(
-            <div>
-                {Idcol1.map(idd => {
-                   iid.sys.id
-                })}
-            </div>
-        )
-    }
-    const ApiCol1 = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/${MapId()}?access_token=${process.env.ACCESS_TOKEN}&content_type=post`
+    const ApiCol1 = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/${Idcol1.map(idd => {return idd.sys.id})}?access_token=${process.env.ACCESS_TOKEN}&content_type=post`
     console.log(ApiCol1)
     useEffect(() => {
         axios.get(ApiCol1)
@@ -38,7 +29,7 @@ const  ShowImage = (props) => {
     if (load) {
         return(
           <div>
-            {MapId()}
+            {console.log(dataCol1)}
           </div>
         )
     } else {
