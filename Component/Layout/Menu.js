@@ -35,10 +35,10 @@ const Menu = () => {
                         <Link href = '/' ><a>Home</a></Link>
                     </li>
                     <li>
-                        <Link href = '/' ><a>About</a></Link>
+                        <Link href = '/About' ><a>About</a></Link>
                     </li>
                     <li>
-                        <Link href = '/' ><a>Contact</a></Link>
+                        <Link href = '/Contact' ><a>Contact</a></Link>
                     </li>
                 </ul>
           </div>

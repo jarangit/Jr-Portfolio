@@ -1,11 +1,19 @@
-function MySong({ stars }) {
-    return <div>Next stars: {stars}</div>
-  }
-  
-  MySong.getInitialProps = async (ctx) => {
-    const res = await fetch('https://api.github.com/repos/vercel/next.js')
-    const json = await res.json()
-    return { stars: json.stargazers_count }
-  }
-  
-  export default MySong
+import Layout from "../Component/Layout/Layout"
+import Link from "next/link"
+
+const MySong = () => {
+  return(
+    <Layout>
+      <div className = "container">
+        <div>
+            <a  href ="https://www.youtube.com/channel/UCySgBO0m0jqdlgqrWbVyb1w" target = 'bank'>YOUTUBE</a>
+        </div>
+        <div>
+            <a href ="https://soundcloud.com/jaran-donchaaim" target = "bank" >SOULDCLOUD</a>
+        </div>
+      </div>
+    </Layout>
+  )
+}
+
+export default MySong

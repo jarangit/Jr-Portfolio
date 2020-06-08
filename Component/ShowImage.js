@@ -22,10 +22,7 @@ const  ShowImage = (props) => {
     
     if (load) {
         return(
-          <div>
-            {console.log(data.sys.id)}
             <img  src =  {data.fields.file.url} />
-          </div>
         )
     } else {
         return (

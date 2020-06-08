@@ -6,10 +6,16 @@ import ShowImage from "../Component/ShowImage";
 
 
 const Block = styled.div`
-    border: solid;
-    margin: 20px 0;
-    img{
-        width: 200px;
+    display: flex;
+    border: 1px solid;
+    margin-bottom: 20px;
+    padding: 20px;
+    justify-content: center;
+    div{
+        width: 400px;
+        img{
+            width:300px;
+        }
     }
 `
 
@@ -18,30 +24,26 @@ const MyProject = ({data}) => {
     return(
         <Layout>
            <div className = "container" >
-                <div>
                     {data.items.map(items => {
                         return(
                             <Block>
-                                <h3> {items.fields.name} </h3>
-                                <ShowImage  assetsId = {items.fields.image.sys.id}/>
-                                <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.descriptions)}}></div>           
-                                <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.tools)}}></div>
-                                <a href = {items.fields.url} target = "bank"> {items.fields.url} </a>
+                                    <div>
+                                         <ShowImage  assetsId = {items.fields.image.sys.id}/>
+                                    </div>
+                                    <div>
+                                        <h2> {items.fields.name} </h2>
+                                        <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.descriptions)}}></div>         
+                                        <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.tools)}}></div>
+                                        <a href = {items.fields.url} target = "bank"> {items.fields.url} </a>
+                                    </div>
                             </Block>
                         )
                     })}
-                </div>
            </div>
         </Layout>
     )
 }
 
-// MyProject.getInitialProps = async (ctx) => {
-//     const res = await fetch(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/4NAR7Mm1KAmYJUS8qQYbUm?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
-//     const json = await res.json()
-//     console.log(json)
-//     return { urlImg: json}
-// }
 
 MyProject.getInitialProps = async (ctx) => {
     const res = await fetch(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
