@@ -20,11 +20,6 @@ const MyProject = ({data}) => {
            <div className = "container" >
                 <div>
                     {data.items.map(items => {
-<<<<<<< HEAD
-                        // console.log(items)
-=======
-                        // console.log(items.fields.image.sys.id)
->>>>>>> 64632ca052302dd5ed2e3ffa99a68758ec438f30
                         return(
                             <Block>
                                 <h3> {items.fields.name} </h3>

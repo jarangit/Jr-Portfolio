@@ -3,20 +3,24 @@ import { useEffect, useState } from 'react'
 
 const  ShowImage = (props) => {
     // console.log(props.dataImg.col1.map(id => id.sys.id))
-    const Idcol1 =  props.dataImg.col1.map(id => id.sys.id)
-    console.log(Idcol1)
-    let IdIm;
-    Idcol1.forEach(function(e){
-        console.log(e)
-        if(e === '4pOuPy8OHrUNMMwx1WqqiP'){
-            IdIm = e;
-        }
-    });
+  
     const [dataCol1, setDataCol1] = useState([]);
-    const [IdImg, setIdImg] = useState('ยังอะ');
+    const [IdImg, setIdImg] = useState([]);
     const [load, setLoad] = useState(false);
     const [error, setError] = useState('');
-    
+
+    const Idcol1 =  props.dataImg.col1.map(id => id.sys.id)
+    // const IdMap = () => {
+    //     console.log(Idcol1)
+    //     return(
+    //         <div>
+    //             {Idcol1.map(id => {
+                    
+    //             })}
+    //         </div>
+    //     )
+    // }
+    // IdMap()
     // const MapId = () => [
     //     Idcol1.map(Id => {
     //         setIdImg('มาแล้ว')
@@ -25,7 +29,7 @@ const  ShowImage = (props) => {
 
     // MapId()
     
-    const ApiCol1 = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/4pOuPy8OHrUNMMwx1WqqiP?access_token=${process.env.ACCESS_TOKEN}&content_type=post`
+    const ApiCol1 = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/${IdImg}?access_token=${process.env.ACCESS_TOKEN}&content_type=post`
     console.log(ApiCol1)
     useEffect(() => {
         axios.get(ApiCol1)
@@ -37,13 +41,21 @@ const  ShowImage = (props) => {
                 setError('No Data');
                 setLoad(true)
             })
+            {Idcol1.forEach((e)=>{
+                console.log(e)
+                axios.get(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/${e}?access_token=${process.env.ACCESS_TOKEN}&content_type=post`)
+                .then(res => {
+                    setIdImg(res)
+                })
+            })}
     }, []);
-    
+
+    // console.log(dataCol1.fields.file.url)
     
     if (load) {
         return(
           <div>
-              {console.log(IdIm)}
+              {/* <img src={IdImg.data.fields.file.url} /> */}
           </div>
         )
     } else {
