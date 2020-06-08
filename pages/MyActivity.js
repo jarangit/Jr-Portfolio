@@ -14,6 +14,7 @@ const Block = styled.div`
   }
 `
 function MyActivity({ data }) {
+  console.log(data)
     return (
       <Layout>
           <div className ="container" >
@@ -25,6 +26,7 @@ function MyActivity({ data }) {
   MyActivity.getInitialProps = async (ctx) => {
     const res = await fetch(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.ACCESS_TOKEN}&content_type=myActivity`)
     const json = await res.json()
+    console.log(json)
     return { data: json}
   }
   
