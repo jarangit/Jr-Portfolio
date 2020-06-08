@@ -3,29 +3,24 @@ import { useEffect, useState } from 'react'
 
 const  ShowImage = (props) => {
     // console.log(props.dataImg.col1.map(id => id.sys.id))
-    const Idcol1 =  props.dataImg.col1.map(id => id.sys.id)
-    console.log(Idcol1)
-    let IdIm;
-    Idcol1.forEach(function(e){
-        console.log(e)
-        if(e === '4pOuPy8OHrUNMMwx1WqqiP'){
-            IdIm = e;
-        }
-    });
+    const Idcol1 =  props.dataImg.col1.map(id => id)
+   
+
     const [dataCol1, setDataCol1] = useState([]);
     const [IdImg, setIdImg] = useState('ยังอะ');
     const [load, setLoad] = useState(false);
     const [error, setError] = useState('');
     
-    // const MapId = () => [
-    //     Idcol1.map(Id => {
-    //         setIdImg('มาแล้ว')
-    //     })
-    // ]
-
-    // MapId()
-    
-    const ApiCol1 = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/4pOuPy8OHrUNMMwx1WqqiP?access_token=${process.env.ACCESS_TOKEN}&content_type=post`
+    const MapId = () => {
+        return(
+            <div>
+                {Idcol1.map(idd => {
+                   iid.sys.id
+                })}
+            </div>
+        )
+    }
+    const ApiCol1 = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/${MapId()}?access_token=${process.env.ACCESS_TOKEN}&content_type=post`
     console.log(ApiCol1)
     useEffect(() => {
         axios.get(ApiCol1)
@@ -43,7 +38,7 @@ const  ShowImage = (props) => {
     if (load) {
         return(
           <div>
-              {console.log(IdIm)}
+            {MapId()}
           </div>
         )
     } else {
