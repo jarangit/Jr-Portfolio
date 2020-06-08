@@ -19,7 +19,6 @@ function MyGallery({ data }) {
       <Layout>
        <div className = "container">
         {data.items.map(items => {
-          console.log(items)
             return(
               <div key = {items.fields.name}>
               <h2> {items.fields.name} </h2>

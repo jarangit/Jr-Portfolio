@@ -11,7 +11,6 @@ import Navbar from '../Component/Layout/Navbar'
 // })
 
 const Index = ({stars}) => {
-  console.log(stars.items)
 
   // async function fetchEntries() {
   //   const entries = await client.getEntries()

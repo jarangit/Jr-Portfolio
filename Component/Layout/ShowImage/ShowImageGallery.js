@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 const  ShowImage = (props) => {
     // console.log(props.dataImg.col1.map(id => id.sys.id))
 
+
     const Idcol1 =  props.dataImg.col1.map(id => id)
    
 
@@ -63,6 +64,10 @@ const  ShowImage = (props) => {
             </div>
         );
     }
+    return (
+        <div>this images</div>
+    )
+
 };
 
 
