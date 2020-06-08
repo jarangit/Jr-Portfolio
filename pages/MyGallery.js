@@ -1,7 +1,8 @@
 import Layout from "../Component/Layout/Layout"
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import styled from 'styled-components'
-import ShowImageGallery from "../Component/Layout/ShowImage/ShowImageGallery";
+import ShowImageGallery from "../Component/MyGallery/ShowImage/ShowImageGallery";
+import ListAlbum from "../Component/MyGallery/ShowImage/ListAlbum";
 
 
 const Block = styled.div`
@@ -15,19 +16,11 @@ const Block = styled.div`
   }
 `
 function MyGallery({ data }) {
+  console.log(data)
     return (
       <Layout>
        <div className = "container">
-        {data.items.map(items => {
-            return(
-              <div key = {items.fields.name}>
-              <h2> {items.fields.name} </h2>
-                   <Block>
-                     <ShowImageGallery dataImg = {items.fields}/>
-                  </Block>
-              </div>
-            )
-          })}
+          <ListAlbum data = {data} />
        </div>
       </Layout>
     )

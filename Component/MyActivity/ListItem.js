@@ -8,6 +8,7 @@ const ListItemMyAc = (props) => {
     return(
         <div>
             {props.data.items.map(items => {
+                console.log(items.sys.id)
                return(
                    <div>
                         <Link href = '/[MyActivityid]' as = {`/${items.sys.id}`} key = {items.sys.id} >
