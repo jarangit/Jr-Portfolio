@@ -31,22 +31,15 @@ const  ShowImage = (props) => {
 
     // MapId()
     
-    const ApiCol1 = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/${IdImg}?access_token=${process.env.ACCESS_TOKEN}&content_type=post`
-    
     const MapId = () => {
-        return(
-            <div>
-                {Idcol1.map(idd => {
-                   return (
-                       <div> jarn </div>
-                   )
-                })}
-            </div>
-        )
+        return Idcol1.map(idd => {
+            const ApiCol1 = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/${idd.sys.id}?access_token=${process.env.ACCESS_TOKEN}&content_type=post`
+            return ApiCol1
+        })
     }
-    console.log(ApiCol1)
+    console.log(MapId())
     useEffect(() => {
-        axios.get(ApiCol1)
+        axios.get(MapId())
             .then(res => {
                 setDataCol1(res.data);
                 setLoad(true);
@@ -55,21 +48,12 @@ const  ShowImage = (props) => {
                 setError('No Data');
                 setLoad(true)
             })
-            {Idcol1.forEach((e)=>{
-                console.log(e)
-                axios.get(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/${e}?access_token=${process.env.ACCESS_TOKEN}&content_type=post`)
-                .then(res => {
-                    setIdImg(res)
-                })
-            })}
-    }, []);
-
-    // console.log(dataCol1.fields.file.url)
-    
+    }, []);    
     if (load) {
         return(
           <div>
-            {/* {MapId()} */}
+              {console.log(dataCol1)}
+            {MapId()}
           </div>
         )
     } else {
