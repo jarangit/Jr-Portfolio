@@ -2,27 +2,29 @@ import Layout from "../Component/Layout/Layout"
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import styled from 'styled-components'
 import ListItemMyAc from '../Component/MyActivity/ListItem'
+import ShowImage from '../Component/ShowImage'
 
 const Block = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
+   
   img{
-    width: 200px;
-    vertical-align: middle;
-
+    width: 100%;
   }
 `
 function MyActivityId(props) {
     console.log(props.data)
-    const { title, descriptions, date } = props.data.fields
+    const { title, descriptions, date,gallery } = props.data.fields
     return (
       <Layout>
-          <div className ="container" >
+          <Block className ="container" >
               <h3> {title} </h3>
               <div dangerouslySetInnerHTML={{__html: documentToHtmlString(descriptions)}}></div>
-              <p> {date} </p>        
-          </div>
+              <p> {date} </p> 
+              {gallery.map(idImg => {
+                return(
+                  <ShowImage assetsId = {idImg.sys.id}/>
+                )
+              })}      
+          </Block>
       </Layout>
     )
   }

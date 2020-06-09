@@ -14,6 +14,7 @@ const MenuItem = styled.div`
     ul{
         display: flex;
         li{
+            margin: 15px 0;
             list-style: none;
             padding: 0 10px;
         }
