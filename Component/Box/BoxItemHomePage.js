@@ -1,5 +1,7 @@
 import Link from "next/link"
 import styled from 'styled-components'
+import axios from "axios"
+import { useEffect, useState } from 'react'
 
 const BoxItem = styled.div`
     display: flex;
@@ -32,6 +34,25 @@ const Text = styled.div`
     text-align: left;
 `
 const BoxItemHomePage = () => {
+
+    const [data, setData] = useState([]);
+      const [load, setLoad] = useState(false);
+      const [error, setError] = useState('');
+  
+      useEffect(() => {
+          axios.get(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/1dpD4I7KVFDQSBWOdy4J5A?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
+              .then(res => {
+                setData(res.data);
+                  setLoad(true);
+              })
+              .catch(err => {
+                  setError('No Data');
+                  setLoad(true)
+              })
+      }, []);
+
+      console.log(data)
+
     return(
         <BoxItem>
              <Link href = "/MyProject" >
@@ -40,7 +61,7 @@ const BoxItemHomePage = () => {
                             <Text>
                                 <h1> MY PROJECT </h1>
                             </Text>
-                            <img src="/Image/Header.jpg" width='100%'/>
+                            <img src="//images.ctfassets.net/mhf3i20liehl/1dpD4I7KVFDQSBWOdy4J5A/8d0ba47a353e90651be8e97aa3ab9cf5/_________________________________________0150.jpg" width='100%'/>
                        </Container>
                     </a>
              </Link>
@@ -50,7 +71,7 @@ const BoxItemHomePage = () => {
                             <Text>
                                 <h1> MY BOOK </h1>
                             </Text>
-                            <img src="/Image/Header.jpg" width='100%'/>
+                            <img src="//images.ctfassets.net/mhf3i20liehl/1dpD4I7KVFDQSBWOdy4J5A/8d0ba47a353e90651be8e97aa3ab9cf5/_________________________________________0150.jpg" width='100%'/>
                        </Container>
                     </a>
              </Link>
@@ -60,7 +81,7 @@ const BoxItemHomePage = () => {
                             <Text>
                                 <h1> MY GALLERY </h1>
                             </Text>
-                            <img src="/Image/Header.jpg" width='100%'/>
+                            <img src="//images.ctfassets.net/mhf3i20liehl/1dpD4I7KVFDQSBWOdy4J5A/8d0ba47a353e90651be8e97aa3ab9cf5/_________________________________________0150.jpg" width='100%'/>
                        </Container>
                     </a>
              </Link>
@@ -70,7 +91,7 @@ const BoxItemHomePage = () => {
                             <Text>
                                 <h1> MY SONG </h1>
                             </Text>
-                            <img src="/Image/Header.jpg" width='100%'/>
+                            <img src="//images.ctfassets.net/mhf3i20liehl/1dpD4I7KVFDQSBWOdy4J5A/8d0ba47a353e90651be8e97aa3ab9cf5/_________________________________________0150.jpg" width='100%'/>
                        </Container>
                     </a>
              </Link>
@@ -80,7 +101,7 @@ const BoxItemHomePage = () => {
                             <Text>
                                 <h1> MY ACTIVITY </h1>
                             </Text>
-                            <img src="/Image/Header.jpg" width='100%'/>
+                            <img src="//images.ctfassets.net/mhf3i20liehl/1dpD4I7KVFDQSBWOdy4J5A/8d0ba47a353e90651be8e97aa3ab9cf5/_________________________________________0150.jpg" width='100%'/>
                        </Container>
                     </a>
              </Link>
@@ -89,7 +110,7 @@ const BoxItemHomePage = () => {
                             <Text>
                                 <h1> MY BUSINESS </h1>
                             </Text>
-                            <img src="/Image/Header.jpg" width='100%'/>
+                            <img src="//images.ctfassets.net/mhf3i20liehl/1dpD4I7KVFDQSBWOdy4J5A/8d0ba47a353e90651be8e97aa3ab9cf5/_________________________________________0150.jpg" width='100%'/>
                        </Container>
                     </a>
         </BoxItem>

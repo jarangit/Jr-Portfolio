@@ -10,39 +10,20 @@ import Navbar from '../Component/Layout/Navbar'
 //   accessToken: 'EL8m-NzvxIwV3PlUd14_xYOrxihJuii6ONKvcJgIPCw'
 // })
 
-const Index = ({stars}) => {
-
-  // async function fetchEntries() {
-  //   const entries = await client.getEntries()
-  //   if (entries.items) return entries.items
-  //   console.log(`Error getting Entries for ${contentType.name}.`)
-  // }
-
-  // const [posts, setPosts] = useState([])
-
-  // useEffect(() => {
-  //   async function getPosts() {
-  //     const allPosts = await fetchEntries()
-  //     setPosts([...allPosts])
-  //   }
-  //   getPosts()
-  // }, [])
-  // const data = posts[1].fields
-  // console.log(posts)
-
-
+const Index = ({data}) => {
+  console.log(data)
   return(
     <Layout  >
-      <Header/>
+      <Header data = {data} />
       <Navbar/>
-      <BoxItemHomePage/>
+      <BoxItemHomePage data = {data}/>
     </Layout>
   )
 }
 Index.getInitialProps = async (ctx) => {
-  const res = await fetch(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.ACCESS_TOKEN}&content_type=mySet`)
+  const res = await fetch(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.ACCESS_TOKEN}&content_type=media`)
   const json = await res.json()
-  return { stars: json}
+  return { data: json}
 }
 
 export default Index
