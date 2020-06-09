@@ -5,22 +5,15 @@ import ShowImageGallery from "../Component/MyGallery/ShowImage/ShowImageGallery"
 import ListAlbum from "../Component/MyGallery/ShowImage/ListAlbum";
 
 
-const Block = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-  img{
-    width: 200px;
-    vertical-align: middle;
 
-  }
-`
 function MyGallery({ data }) {
   console.log(data)
     return (
       <Layout>
        <div className = "container">
-          <ListAlbum data = {data} />
+         <h1>MY GALLERY</h1>
+         <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+              <ListAlbum data = {data} />
        </div>
       </Layout>
     )

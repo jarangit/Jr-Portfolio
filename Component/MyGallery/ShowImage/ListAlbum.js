@@ -1,22 +1,46 @@
 import Link from "next/link"
+import ShowImage from './ShowImageGallery'
+import styled from 'styled-components'
+
+const Block = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    div{
+        padding: 0;
+        width: 300px;
+        p{
+            padding: 10px;
+        }
+    }
+    img{
+        /* width: 200px; */
+    }
+
+`
+
 
 const ListAlbum = (props) => {
-    console.log(props.data)
+
     return(
-        <div>
+
+           <Block>
            {props.data.items.map(items => {
-               return(
-                   <div>
-                       <Link href = '/MyGallery/[MyGalleryid]' as = {`/MyGallery/${items.sys.id}`} key = {items.sys.id} >
-                            <a>
-                                {items.fields.name}
-                                {items.sys.id}
-                            </a>
-                       </Link>
-                   </div>
-               )
+               console.log(items.fields.thumbnail.sys.id) 
+
+                return(
+                     <div  className = "card">
+                        <Link href = '/MyGallery/[MyGalleryid]' as = {`/MyGallery/${items.sys.id}`} key = {items.sys.id} >
+                             <a>
+                                <ShowImage col1 = {items.fields.thumbnail.sys.id}/>
+                                    <p>{items.fields.name}</p>
+                                    <p> {items.fields.descriptions} </p>
+                             </a>
+                        </Link>
+                     </div>
+                )
            })}
-        </div>
+           </Block>
+
     )
 }
 

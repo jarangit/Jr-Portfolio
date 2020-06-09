@@ -7,10 +7,6 @@ import { useEffect, useState } from 'react'
 
 
 //styled
-const Container = styled.div`
-    max-width: 1024px;
-    margin: 0 auto;
-`
 const BlockContent = styled.div`
     border-style: solid;
     border-radius: 0.5rem;
@@ -18,6 +14,14 @@ const BlockContent = styled.div`
     padding: 20px;
 `
 const Block = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    div{
+        width: 250px;
+        height: 290px;
+        overflow:hidden;
+    }
     a{
         color:black;
         text-decoration: none;
@@ -49,33 +53,25 @@ const MyBook = ({data}) => {
     
     return(
         <Layout>
-            <Container>
+            <div className = "container" >
             <h1>My Book</h1>
-       {data.items.map(items => {
-        // const [idItem, SetIdItem] = useState("123")
-        // console.log(idItem)
-        // const FuncSendIdItem = () => {
-        //     // SetIdItem(items.sys.id)
-        // }
-        // const onClickMulti = () => {
-        //     FuncOpenModal()
-        //     FuncSendIdItem()
-        // }
-        // console.log(items.sys.id)
-         return(
-        <Block onClick = {ClickSendIdItem} id = {items.sys.id}>
-             <Link href = "#">
-               <a>
-               <div className = "card">
-                    <h2> {items.fields.title} </h2>
-                    <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.contents)}}></div>           
-                </div>
-               </a>
-            </Link>
-        </Block>
-         )
-       })}
-            </Container>
+            <Block >
+                {data.items.map(items => {
+                    return(
+                        <div onClick = {ClickSendIdItem} id = {items.sys.id}  className = "card">
+                            <Link href = "#">
+                                <a>
+                                <div>
+                                        <h3> {items.fields.title} </h3>
+                                        <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.contents)}}></div>           
+                                    </div>
+                                </a>
+                            </Link>
+                        </div>
+                         )
+                        })}
+            </Block>
+            </div>
             <ModalMyBook valueClick = {openModal} onClose={FuncOpenModal} valueContent = {idItem}/>
         </Layout>
     )

@@ -7,16 +7,7 @@ import ShowImage from "../Component/ShowImage";
 
 const Block = styled.div`
     display: flex;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 0.5rem;
-    margin-bottom: 20px;
-    padding: 20px;
     justify-content: center;
-    background: white;
-    :hover{
-        background: #f7f7f7;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
     div{
         width: 400px;
         img{
@@ -32,17 +23,22 @@ const MyProject = ({data}) => {
            <div className = "container" >
                     {data.items.map(items => {
                         return(
-                            <Block>
-                                    <div>
-                                         <ShowImage  assetsId = {items.fields.image.sys.id}/>
-                                    </div>
-                                    <div>
-                                        <h2> {items.fields.name} </h2>
-                                        <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.descriptions)}}></div>         
-                                        <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.tools)}}></div>
-                                        <a href = {items.fields.url} target = "bank"> {items.fields.url} </a>
-                                    </div>
-                            </Block>
+                                    <a href = {items.fields.url} target = "bank">
+                                        <Block className="card">
+                                            <div>
+                                                <ShowImage  assetsId = {items.fields.image.sys.id}/>
+                                            </div>
+                                            <div>
+                                                <h2> {items.fields.name} </h2>
+                                                <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.descriptions)}}></div>        
+                                                <div>
+                                                    <h3>Tools</h3>
+                                                    <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.tools)}}></div>
+                                                </div>
+                                                <a href = {items.fields.url} target = "bank"> URL : {items.fields.url} </a>
+                                            </div>
+                                        </Block>
+                                    </a>
                         )
                     })}
            </div>

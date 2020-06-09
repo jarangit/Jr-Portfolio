@@ -16,11 +16,12 @@ const Block = styled.div`
 `
 function MyGalleryId(props) {
     console.log(props.data.fields)
-    const { name, col1,} = props.data.fields
+    const { name, descriptions, col1} = props.data.fields
     return (
       <Layout>
           <div className ="container" >
-                 {name}
+                 <h1> {name} </h1>
+                 <p> {descriptions} </p>
                  <div>
                    {col1.map(idCol1 => {
                      return <ShowImage col1 ={idCol1.sys.id} />
