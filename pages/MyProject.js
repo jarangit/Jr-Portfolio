@@ -7,10 +7,16 @@ import ShowImage from "../Component/ShowImage";
 
 const Block = styled.div`
     display: flex;
-    border: 1px solid;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0.5rem;
     margin-bottom: 20px;
     padding: 20px;
     justify-content: center;
+    background: white;
+    :hover{
+        background: #f7f7f7;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
     div{
         width: 400px;
         img{

@@ -66,10 +66,10 @@ const MyBook = ({data}) => {
         <Block onClick = {ClickSendIdItem} id = {items.sys.id}>
              <Link href = "#">
                <a>
-               <BlockContent>
+               <div className = "card">
                     <h2> {items.fields.title} </h2>
                     <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.contents)}}></div>           
-                </BlockContent>
+                </div>
                </a>
             </Link>
         </Block>

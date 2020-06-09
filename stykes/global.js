@@ -1,4 +1,7 @@
-/* body{
+import css from 'styled-jsx/css'
+
+export default css.global`
+body{
     padding: 0;
     margin: 0;
     font-family: 'Kanit', sans-serif;
@@ -14,4 +17,5 @@
     background: white;
     padding: 20px;
     margin-bottom: 20px;
-} */
+}
+`
