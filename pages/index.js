@@ -4,6 +4,7 @@ import BoxItemHomePage from '../Component/Box/BoxItemHomePage'
 import { useEffect, useState } from 'react'
 import Header from '../Component/Layout/Header'
 import Navbar from '../Component/Layout/Navbar'
+import Footer from '../Component/Layout/Footer'
 
 // const client = require('contentful').createClient({
 //   space: 'mhf3i20liehl',
@@ -17,6 +18,7 @@ const Index = ({data}) => {
       <Header data = {data} />
       <Navbar/>
       <BoxItemHomePage data = {data}/>
+      <Footer/>
     </Layout>
   )
 }

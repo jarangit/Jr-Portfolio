@@ -33,13 +33,13 @@ const Menu = () => {
           <div>
             <ul>
                     <li>
-                        <Link href = '/' ><a>Home</a></Link>
+                        <Link href = '/' ><a>HOME</a></Link>
                     </li>
                     <li>
-                        <Link href = '/About' ><a>About</a></Link>
+                        <Link href = '/About' ><a>ABOUT</a></Link>
                     </li>
                     <li>
-                        <Link href = '/Contact' ><a>Contact</a></Link>
+                        <Link href = '/Contact' ><a>CONTEACT</a></Link>
                     </li>
                 </ul>
           </div>

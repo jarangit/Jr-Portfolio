@@ -14,11 +14,15 @@ const Text = styled.div`
     bottom: 50%;
     left: 10%;
     text-align: left;
+    div{
+        margin-top: 10px;
+    }
     a{
         text-decoration: none;
         background: black;
         padding: 10px;
         color: white;
+        margin-top: 20px;
         :hover{
             background: white;
             color: black;
@@ -32,9 +36,12 @@ const Header = () => {
         <Container>
             <Text>
                 <h1>HI I'M JARAN</h1>
+                <h1>I'M WEB PROGRAMER</h1>
+                <div>
                 <Link href = '/' >
                     <a> MY CV </a>
                 </Link>
+                </div>
             </Text>
             <img src= '//images.ctfassets.net/mhf3i20liehl/1dpD4I7KVFDQSBWOdy4J5A/8d0ba47a353e90651be8e97aa3ab9cf5/_________________________________________0150.jpg' width='100%'/>
         </Container>
