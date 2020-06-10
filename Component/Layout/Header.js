@@ -38,7 +38,7 @@ const Header = () => {
                 <h1>HI I'M JARAN</h1>
                 <h1>I'M WEB PROGRAMER</h1>
                 <div>
-                <Link href = '/' >
+                <Link href = '/About' >
                     <a> MY CV </a>
                 </Link>
                 </div>
