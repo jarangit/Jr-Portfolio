@@ -2,7 +2,7 @@ import Layout from "../Component/Layout/Layout"
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import styled from 'styled-components'
 import ListItemMyAc from '../Component/MyActivity/ListItem'
-import ShowImage from '../Component/ShowImage'
+import ShowImgMyAc from '../Component/MyActivity/ShowImgMyAc'
 
 const Block = styled.div`
    
@@ -19,11 +19,11 @@ function MyActivityId(props) {
               <h3> {title} </h3>
               <div dangerouslySetInnerHTML={{__html: documentToHtmlString(descriptions)}}></div>
               <p> {date} </p> 
-              {/* {gallery.map(idImg => {
+              {gallery.map(idImg => {
                 return(
-                  <ShowImage assetsId = {idImg.sys.id}/>
+                  <ShowImgMyAc data = {idImg.sys.id}/>
                 )
-              })}       */}
+              })}      
           </Block>
       </Layout>
     )

@@ -8,7 +8,7 @@ const ShowImgMyAc = (props) => {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        axios.get(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/${props.data.sys.id}?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
+        axios.get(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/${props.data}?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
             .then(res => {
               setData(res.data);
                 setLoad(true);
