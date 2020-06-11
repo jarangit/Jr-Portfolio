@@ -19,11 +19,11 @@ function MyActivityId(props) {
               <h3> {title} </h3>
               <div dangerouslySetInnerHTML={{__html: documentToHtmlString(descriptions)}}></div>
               <p> {date} </p> 
-              {gallery.map(idImg => {
+              {/* {gallery.map(idImg => {
                 return(
                   <ShowImgMyAc data = {idImg.sys.id}/>
                 )
-              })}      
+              })}       */}
           </Block>
       </Layout>
     )
