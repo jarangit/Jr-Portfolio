@@ -21,6 +21,18 @@ const BoxItem = styled.div`
             }
         }
     }
+    @media all and (max-width:500px){
+        margin: 10px;
+        margin-bottom: 10px;
+        a{
+            div{
+            img{
+                width: 350px;
+                border-radius: 0.5em;
+            }
+        }
+        }
+    }
 `
 const Container = styled.div`
     position: relative;

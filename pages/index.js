@@ -11,7 +11,7 @@ import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 const Index = ({data}) => {
   console.log(data)
   return(
-    <Layout  >
+    <Layout>
       <Header data = {data} />
       <BoxItemHomePage data = {data}/>
     </Layout>

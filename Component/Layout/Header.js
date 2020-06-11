@@ -28,6 +28,18 @@ const Text = styled.div`
             color: black;
         }
     }
+            @media all and (max-width: 900px){
+                width: 50%;
+                left: 25%;
+                text-align: center;
+                h1{
+                    font-size:100%;
+                }
+                a{
+                    padding: 5px;
+                    font-size: 70%;
+                }
+        }
 `
 
 const Header = () => {

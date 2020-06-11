@@ -24,6 +24,16 @@ const Block = styled.div`
             color: black;
         }
     }
+    @media all and (max-width: 900px){
+        padding: 5% 5%;
+        justify-content: center;
+        text-align:center;
+        div{
+            p{
+                font-size: 70%;
+            }
+        }
+    }
 `
 
 const Footer = () => {
