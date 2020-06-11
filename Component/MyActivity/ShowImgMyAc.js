@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 
 
 const ShowImgMyAc = (props) => {
+    console.log(props.data)
     const [data, setData] = useState([]);
     const [load, setLoad] = useState(false);
     const [error, setError] = useState('');
@@ -23,7 +24,6 @@ const ShowImgMyAc = (props) => {
     if (load) {
         return(
           <div>
-            {console.log(data.sys.id)}
             <img  src =  {data.fields.file.url} />
           </div>
         )

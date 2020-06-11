@@ -1,9 +1,7 @@
 import Layout from "../Component/Layout/Layout"
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import styled from 'styled-components'
-import ListItemMyAc from '../Component/MyActivity/ListItem'
 import ShowImgMyAc from '../Component/MyActivity/ShowImgMyAc'
-
 const Block = styled.div`
    
   img{
@@ -11,24 +9,25 @@ const Block = styled.div`
   }
 `
 function MyActivityId(props) {
-    console.log(props.data)
+  console.log(props.data.fields)
     const { title, descriptions, date,gallery } = props.data.fields
+    
+    
     return (
       <Layout>
           <Block className ="container" >
               <h3> {title} </h3>
               <div dangerouslySetInnerHTML={{__html: documentToHtmlString(descriptions)}}></div>
               <p> {date} </p> 
-              {/* {gallery.map(idImg => {
+              {gallery.map(id => {
                 return(
-                  <ShowImgMyAc data = {idImg.sys.id}/>
+                  <ShowImgMyAc data = {id.sys.id} />
                 )
-              })}       */}
+              })}
           </Block>
       </Layout>
     )
-  }
-
+}
   export const getStaticPaths = async () => {
     const res = await fetch(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.ACCESS_TOKEN}&content_type=myActivity`)
     const data = await res.json()
