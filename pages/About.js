@@ -35,7 +35,7 @@ const AboutPage = ({data}) => {
 console.log(data)
     return(
         <Layout>
-            <div className = 'container'>
+            <div className =''>
                 {data.items.map(items =>{
                     const {name, profile, age, address, dateOfBirth, education, nickName, skill, workExperience} = items.fields
                     return(
@@ -44,11 +44,11 @@ console.log(data)
                                 <ShowImage assetsId = {profile.sys.id} />
                                 <div>
                                     <h1> PERSONAL DETAIL </h1>
-                                    <p>Name : {name} </p>
-                                    <p>Nick name : {nickName} </p>
-                                    <p>Age : {age} </p>
-                                    <p>Data of birth : {dateOfBirth} </p>
-                                    <p>Address : {address} </p>
+                                    <p> <strong>NAME</strong> : {name} </p>
+                                    <p> <strong>NICK NAME :</strong> {nickName} </p>
+                                    <p> <strong>AGE :</strong>  {age} </p>
+                                    <p> <strong>DATE OF BIRTH :</strong> {dateOfBirth} </p>
+                                    <p> <strong>ADDRESS : </strong> {address} </p>
                                 </div>
                             </Flex1>
 

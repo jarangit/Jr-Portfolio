@@ -9,7 +9,7 @@ const BoxItem = styled.div`
     justify-content: center;
     margin-bottom: 100px;
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 100px auto;
     a{
         text-decoration: none;
         margin: 10px;

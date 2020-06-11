@@ -14,9 +14,9 @@ const Footer = () => {
     return(
         <div className = "container">
             <Block>
-                <p> My Website Created By NextJS With Contentful-API </p>
+                <p> MY WEBSITE CREATED BY NEXTJS WITH CONTENTFUL-API </p>
                 <p>
-                    <strong>Github : </strong> <a href = "https://github.com/jarangit/Jr-Portfolio" target = "bank"> https://github.com/jarangit/Jr-Portfolio </a>
+                    <strong>GITHUB : </strong> <a href = "https://github.com/jarangit/Jr-Portfolio" target = "bank"> https://github.com/jarangit/Jr-Portfolio </a>
                 </p>
             </Block>
         </div>

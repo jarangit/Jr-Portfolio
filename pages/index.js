@@ -1,11 +1,8 @@
-import Link from 'next/link'
 import Layout from '../Component/Layout/Layout'
 import BoxItemHomePage from '../Component/Box/BoxItemHomePage'
-import { useEffect, useState } from 'react'
 import Header from '../Component/Layout/Header'
-import Navbar from '../Component/Layout/Navbar'
-import Footer from '../Component/Layout/Footer'
-
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 // const client = require('contentful').createClient({
 //   space: 'mhf3i20liehl',
 //   accessToken: 'EL8m-NzvxIwV3PlUd14_xYOrxihJuii6ONKvcJgIPCw'
@@ -16,9 +13,7 @@ const Index = ({data}) => {
   return(
     <Layout  >
       <Header data = {data} />
-      <Navbar/>
       <BoxItemHomePage data = {data}/>
-      <Footer/>
     </Layout>
   )
 }
