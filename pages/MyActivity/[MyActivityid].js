@@ -3,7 +3,9 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import styled from 'styled-components'
 import ShowImgMyAc from '../../Component/MyActivity/ShowImgMyAc'
 const Block = styled.div`
-   
+  p{
+    margin: 10px;
+  }
   img{
     width: 100%;
   }

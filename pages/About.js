@@ -29,7 +29,9 @@ const Flex2 = styled.div`
     div{
         padding: 20px;
     }
-
+    @media all and (max-width: 500px){
+        width: 100%;
+    }
 `
 const AboutPage = ({data}) => {
 console.log(data)

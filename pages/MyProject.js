@@ -6,12 +6,12 @@ import ShowImage from "../Component/ShowImage";
 
 
 const Block = styled.div`
-    display: flex;
-    justify-content: center;
     div{
-        width: 400px;
+        /* width: 100%; */
         img{
-            width:300px;
+            width:100%;
+            margin: 0 auto;
+
         }
     }
 `

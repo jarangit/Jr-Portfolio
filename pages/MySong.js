@@ -7,7 +7,9 @@ import ShowImage from '../Component/ShowImage'
 const Block = styled.div`
   display: flex;
   flex-wrap: wrap;
- 
+  @media all and (max-width: 900px){
+    justify-content: center;
+  }
 `
 const Contai = styled.div`
     width: 40%;
@@ -23,6 +25,11 @@ const Text = styled.div`
     bottom: 10%;
     left: 10%;
     text-align: left;
+    @media all and (max-width: 900px){
+      font-size: 50%;
+      text-align:center;
+      left: 30%;
+  }
 `
 
 const MySong = ({data}) => {
@@ -36,9 +43,9 @@ const MySong = ({data}) => {
                <Contai className = 'card'>
                   <a href = {items.fields.link} >
                     <ShowImage assetsId = {items.fields.thumbnail.sys.id}/>
-                    <Text>
+                    {/* <Text>
                       <h2> {items.fields.name} </h2>
-                    </Text>
+                    </Text> */}
                   </a>
                </Contai>
               )

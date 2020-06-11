@@ -28,6 +28,9 @@ const Block = styled.div`
         padding: 5% 5%;
         justify-content: center;
         text-align:center;
+        
+    }
+    @media all and (max-width: 500px){
         div{
             p{
                 font-size: 70%;
