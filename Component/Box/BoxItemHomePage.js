@@ -25,20 +25,20 @@ const BoxItem = styled.div`
 const Container = styled.div`
     position: relative;
     text-align: center;
-    color: white;
 `
 const Text = styled.div`
     position: absolute;
     bottom: 70%;
     left: 10%;
     text-align: left;
+    color: white;
 `
 const BoxItemHomePage = () => {
 
     const [data, setData] = useState([]);
     const [load, setLoad] = useState(false);
     const [error, setError] = useState('');
-    console.log(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/19FRxx9U84yu81DHMFaVxE?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
+    console.log(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/5FuZD0jTQjr1oukdZwVtk5?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
       useEffect(() => {
           axios.get(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/1dpD4I7KVFDQSBWOdy4J5A?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
               .then(res => {
@@ -61,7 +61,7 @@ const BoxItemHomePage = () => {
                             <Text>
                                 <h1> MY PROJECT </h1>
                             </Text>
-                            <img src="//images.ctfassets.net/mhf3i20liehl/59r1jGdXAvPzCoQhv9IbXX/2e6debdaafd0248bdb14deaf732628f8/18084.jpg" width='100%'/>
+                            <img src="//images.ctfassets.net/mhf3i20liehl/47hetfU3UDalOB6JyBviUw/e68777d25eaf76d8aca60039feb499af/18084.png" width='100%'/>
                        </Container>
                     </a>
              </Link>
@@ -71,7 +71,7 @@ const BoxItemHomePage = () => {
                             <Text>
                                 <h1> MY BOOK </h1>
                             </Text>
-                            <img src="//images.ctfassets.net/mhf3i20liehl/u3nhWzqPaoGjvalZhAK1u/07696cdb8650b59e763587d6297d0e4d/1044.jpg" width='100%'/>
+                            <img src="//images.ctfassets.net/mhf3i20liehl/ci8PNQIV1MCedwTS40sIq/caa7349af2b48675a07b2ac7160a3a1c/1044.png" width='100%'/>
                        </Container>
                     </a>
              </Link>
@@ -81,7 +81,7 @@ const BoxItemHomePage = () => {
                             <Text>
                                 <h1> MY GALLERY </h1>
                             </Text>
-                            <img src="//images.ctfassets.net/mhf3i20liehl/2ov8cZE4mZTmiE0ibNGz0j/335ff11806dda9293df079353e91b94e/561147-PKT15J-161.jpg" width='100%'/>
+                            <img src="//images.ctfassets.net/mhf3i20liehl/3uh0h5hqXI1LHhmaLZwmE7/962471a031bd585bfc202cf1c82a3b08/561147-PKT15J-161.png" width='100%'/>
                        </Container>
                     </a>
              </Link>
@@ -91,7 +91,7 @@ const BoxItemHomePage = () => {
                             <Text>
                                 <h1> MY SONG </h1>
                             </Text>
-                            <img src="//images.ctfassets.net/mhf3i20liehl/19FRxx9U84yu81DHMFaVxE/d4336808b6b65accf848d1e730d89e72/615.jpg" width='100%'/>
+                            <img src="//images.ctfassets.net/mhf3i20liehl/1zv8VprnhfGmyeD4n12eaW/7c5b10e962a07807828b7c2d87bd4f89/615.png" width='100%'/>
                        </Container>
                     </a>
              </Link>
@@ -101,7 +101,7 @@ const BoxItemHomePage = () => {
                             <Text>
                                 <h1> MY ACTIVITY </h1>
                             </Text>
-                            <img src="//images.ctfassets.net/mhf3i20liehl/NM4TOaTzbkmtG9iU2ESOt/bf3c440cf19a6d2c91fcabebcf6ef9cc/20727.jpg" width='100%'/>
+                            <img src="//images.ctfassets.net/mhf3i20liehl/3udibrD7F8gROFp7yJHsEL/7f562add9dc3d9269e3665e016ac8de7/19694.png" width='100%'/>
                        </Container>
                     </a>
              </Link>
@@ -110,7 +110,7 @@ const BoxItemHomePage = () => {
                             <Text>
                                 <h1> MY BUSINESS </h1>
                             </Text>
-                            <img src="//images.ctfassets.net/mhf3i20liehl/bpFhwXWIjI2DhPGU1AlZi/033c19c90a326bed35956f32aa18dc68/799.jpg" width='100%'/>
+                            <img src="//images.ctfassets.net/mhf3i20liehl/5FuZD0jTQjr1oukdZwVtk5/8f9eafbfaa999b3c59a03d9e3f9bc31c/799.png" width='100%'/>
                        </Container>
                     </a>
         </BoxItem>
