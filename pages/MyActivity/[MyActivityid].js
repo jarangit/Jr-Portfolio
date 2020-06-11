@@ -1,7 +1,7 @@
-import Layout from "../Component/Layout/Layout"
+import Layout from "../../Component/Layout/Layout"
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import styled from 'styled-components'
-import ShowImgMyAc from '../Component/MyActivity/ShowImgMyAc'
+import ShowImgMyAc from '../../Component/MyActivity/ShowImgMyAc'
 const Block = styled.div`
    
   img{
