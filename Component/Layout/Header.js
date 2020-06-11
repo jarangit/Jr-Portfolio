@@ -43,7 +43,7 @@ const Header = () => {
                 </Link>
                 </div>
             </Text>
-            <img src= '//images.ctfassets.net/mhf3i20liehl/1dpD4I7KVFDQSBWOdy4J5A/8d0ba47a353e90651be8e97aa3ab9cf5/_________________________________________0150.jpg' width='100%'/>
+            <img src= '//images.ctfassets.net/mhf3i20liehl/59r1jGdXAvPzCoQhv9IbXX/2e6debdaafd0248bdb14deaf732628f8/18084.jpg' width='100%'/>
         </Container>
     )
 }
