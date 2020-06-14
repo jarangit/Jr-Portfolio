@@ -27,7 +27,7 @@ const BoxItem = styled.div`
         a{
             div{
             img{
-                width: 350px;
+                width: 250px;
                 border-radius: 0.5em;
             }
         }
@@ -44,6 +44,9 @@ const Text = styled.div`
     left: 10%;
     text-align: left;
     color: white;
+    @media all and (max-width: 500px){
+        font-size: 60%;
+    }
 `
 const BoxItemHomePage = () => {
 

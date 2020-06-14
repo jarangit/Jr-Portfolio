@@ -33,7 +33,7 @@ const Text = styled.div`
                 left: 25%;
                 text-align: center;
                 h1{
-                    font-size:100%;
+                    font-size:120%;
                 }
                 a{
                     padding: 5px;

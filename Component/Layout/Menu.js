@@ -39,7 +39,7 @@ const Menu = () => {
                         <Link href = '/About' ><a>ABOUT</a></Link>
                     </li>
                     <li>
-                        <Link href = '/Contact' ><a>CONTEACT</a></Link>
+                        <Link href = '/Contact' ><a>CONTACT</a></Link>
                     </li>
                 </ul>
           </div>
