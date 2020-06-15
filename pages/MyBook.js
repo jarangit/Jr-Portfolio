@@ -8,10 +8,10 @@ import { useEffect, useState } from 'react'
 
 //styled
 const BlockContent = styled.div`
-    border-style: solid;
-    border-radius: 0.5rem;
-    margin: 10px 0;
-    padding: 20px;
+   white-space: nowrap; 
+    width: 200px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 `
 const Block = styled.div`
     display: flex;
@@ -19,12 +19,27 @@ const Block = styled.div`
     justify-content: center;
     div{
         width: 250px;
-        height: 290px;
-        overflow:hidden;
+        button{
+            background: black;
+            padding: 10px;
+            color: white;
+            margin-top: 20px;
+            border-style:none;
+            font-size:70%;
+            :hover{
+                background:white;
+                color: black;
+            }
+        }
     }
     a{
         color:black;
         text-decoration: none;
+    }
+    @media all and (max-width: 900px){
+     #jri.content{
+         overflow:hidden;
+     }
     }
 `
 //end styed
@@ -61,9 +76,10 @@ const MyBook = ({data}) => {
                         <div onClick = {ClickSendIdItem} id = {items.sys.id}  className = "card">
                             <Link href = "#">
                                 <a>
-                                <div>
+                                    <div>
                                         <h3> {items.fields.title} </h3>
-                                        <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.contents)}}></div>           
+                                        <div className = 'cut-text' dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.contents)}}></div>
+                                        <button> READ MORE </button>           
                                     </div>
                                 </a>
                             </Link>
