@@ -44,7 +44,12 @@ h1,h2,h3,h4,h5,h6, p {
     font-size:70%;
     display: none;
 }
+.jr-excerpt{
+    height: 150px;
+    overflow: hidden;
+    margin: 5px;
 
+}
 @media screen and (max-width : 900px){
     .container{
         padding: 5%;

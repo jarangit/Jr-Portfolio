@@ -8,9 +8,11 @@ const Block = styled.div`
     display: flex;
     flex-wrap: wrap;
     div{
-        img{
-            width: 100%;
-        }
+        padding: 0;
+        width: 300px;
+    }
+    img{
+        width: 100%;
     }
 `
 
@@ -25,9 +27,11 @@ const ListItemMyAc = (props) => {
                         <Link href = '/MyActivity/[MyActivityid]' as = {`/MyActivity/${items.sys.id}`} key = {items.sys.id} >
                            <a>
                                 <ShowImgMyAc data = {items.fields.thumbnail.sys.id} />
-                                <h1> {items.fields.title} </h1>
-                                <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.descriptions)}}></div>
-                                <p> {items.fields.date} </p>    
+                                <div className = "jr-excerpt">
+                                    <h1> {items.fields.title} </h1>
+                                    <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.descriptions)}}></div>
+                                    <p> {items.fields.date} </p>  
+                                </div>  
                             </a>    
                         </Link> 
                    </div>

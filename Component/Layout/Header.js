@@ -7,6 +7,7 @@ const Container = styled.div`
     position: relative;
     text-align: center;
     color: white;
+    z-index:2;
 `
 const Text = styled.div`
     width: 30%;

@@ -2,9 +2,12 @@ import Link from "next/link"
 import styled from 'styled-components'
 
 const MenuItem = styled.div`
-    padding: 0 50px;
+    z-index: 3;
+    top: 0;
+    width: 100%;
+    position: fixed;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
     background: black;
     a{

@@ -11,6 +11,12 @@ const Block = styled.div`
         p{
             padding: 10px;
         }
+        a{
+            div{
+                height: 200px;
+                overflow:hidden;
+            }
+        }
     }
     img{
         /* width: 200px; */
@@ -32,8 +38,10 @@ const ListAlbum = (props) => {
                         <Link href = '/MyGallery/[MyGalleryid]' as = {`/MyGallery/${items.sys.id}`} key = {items.sys.id} >
                              <a>
                                 <ShowImage col1 = {items.fields.thumbnail.sys.id}/>
-                                    <p>{items.fields.name}</p>
-                                    <p> {items.fields.descriptions} </p>
+                                    <div>
+                                        <p>{items.fields.name}</p>
+                                        <p> {items.fields.descriptions} </p>
+                                    </div>
                              </a>
                         </Link>
                      </div>
