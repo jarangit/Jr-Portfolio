@@ -67,7 +67,7 @@ const MyBook = ({data}) => {
                             <Link href = "#">
                                 <a>
                                     <div className = 'jr-block-content'>
-                                        <h3> {items.fields.title} </h3>
+                                        <h3>{'EP.'+ items.fields.ep} {items.fields.title} </h3>
                                         <div className = 'cut-text' dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.contents)}}></div>
                                         <button className = 'jr-buttonHover' > READ MORE </button>           
                                     </div>

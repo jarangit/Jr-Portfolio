@@ -75,7 +75,7 @@ const ModalMyBook = (props) => {
                     <div >
                     <button onClick = {props.onClose}>x</button>
                     <div>
-                        <h2> {valueContent.title} </h2>
+                        <h3> {valueContent.title} </h3>
                         <div dangerouslySetInnerHTML={{__html: documentToHtmlString(valueContent.contents)}}></div>           
                     </div>
                     </div>

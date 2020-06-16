@@ -15,7 +15,7 @@ const Index = ({data}) => {
   return(
     <Layout>
       <div>
-        <Header data = {data} />
+        <Header data = {data}  />
         <BoxItemHomePage data = {data}/>
       </div>
     </Layout>
