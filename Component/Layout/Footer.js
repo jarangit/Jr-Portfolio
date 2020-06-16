@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { faFacebook, faYoutube, faLine  } from '@fortawesome/free-brands-svg-icons' 
 import { faThumbsUp, faPhone, faMapMarker, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Link from 'next/link'
 
 const Block = styled.div`
     display: flex;
@@ -38,6 +39,13 @@ const Block = styled.div`
         }
     }
 `
+const FooterMenuPage = styled.ul`
+    padding: 0;
+            list-style:none;
+            li{
+                margin: 0 5px;
+            }
+`
 
 const Footer = () => {
 
@@ -49,6 +57,41 @@ const Footer = () => {
                     <p>
                         <strong>GITHUB : </strong> <a href = "https://github.com/jarangit/Jr-Portfolio" target = "bank"> https://github.com/jarangit/Jr-Portfolio </a>
                     </p>
+                    {/* <FooterMenuPage>
+                        <ul>
+                            <p> MENU </p>
+                            <li>
+                                <Link href = 'MyProject'>
+                                    <a> My Project </a>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href = 'MyBook'>
+                                    <a> My Book </a>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href = 'MyGallery'>
+                                    <a> My Gallery </a>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href = 'MySong'>
+                                    <a> My Song </a>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href = 'MyActivity'>
+                                    <a> My Actibity </a>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href = 'MyBusiness'>
+                                    <a> My Business </a>
+                                </Link>
+                            </li>
+                        </ul>
+                    </FooterMenuPage> */}
                 </div>
                 <div>
                         <ul>
@@ -70,6 +113,7 @@ const Footer = () => {
                         </ul>
                 </div>
             </Block>
+            
         </div>
     )
 }

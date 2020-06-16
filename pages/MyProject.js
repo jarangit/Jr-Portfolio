@@ -8,6 +8,9 @@ import ShowImage from "../Component/ShowImage";
 const Block = styled.div`
     div{
         /* width: 100%; */
+        ul{
+            margin: 0;
+        }
         img{
             width:100%;
             margin: 0 auto;
@@ -17,7 +20,7 @@ const Block = styled.div`
 `
 
 const MyProject = ({data}) => {
-    console.log(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/4NAR7Mm1KAmYJUS8qQYbUm?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
+    console.log(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/NyD1Y3lSNMwtKPdv96pwB?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
     return(
         <Layout>
            <div className = "container" >

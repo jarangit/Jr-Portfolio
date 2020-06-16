@@ -12,7 +12,6 @@ function MyGallery({ data }) {
       <Layout>
        <div className = "container">
          <h1>MY GALLERY</h1>
-         <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
               <ListAlbum data = {data} />
        </div>
       </Layout>

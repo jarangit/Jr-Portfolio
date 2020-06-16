@@ -10,6 +10,9 @@ const Block = styled.div`
     div{
         padding: 0;
         width: 300px;
+        p{
+            padding: 0 5px;
+        }
     }
     img{
         width: 100%;
