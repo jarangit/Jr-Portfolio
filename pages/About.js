@@ -46,7 +46,7 @@ console.log(data)
                                 <ShowImage assetsId = {profile.sys.id} />
                                 <div>
                                     <h1> PERSONAL DETAIL </h1>
-                                    <p> <strong>NICK NAME :</strong> {nickName} </p>
+                                    <p> <strong>NAME</strong> : {name} </p>
                                     <p> <strong>AGE :</strong>  {age} </p>
                                     <p> <strong>DATE OF BIRTH :</strong> {dateOfBirth} </p>
                                     <p> <strong>ADDRESS : </strong> {address} </p>
