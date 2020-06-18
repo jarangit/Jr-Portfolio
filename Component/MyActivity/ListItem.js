@@ -29,9 +29,9 @@ const ListItemMyAc = (props) => {
                    <div className = 'card'>
                         <Link href = '/MyActivity/[MyActivityid]' as = {`/MyActivity/${items.sys.id}`} key = {items.sys.id} >
                            <a>
+                                    <h1> {items.fields.title} </h1>
                                 <ShowImgMyAc data = {items.fields.thumbnail.sys.id} />
                                 <div className = "jr-excerpt">
-                                    <h1> {items.fields.title} </h1>
                                     <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.descriptions)}}></div>
                                     <p> {items.fields.date} </p>  
                                 </div>  

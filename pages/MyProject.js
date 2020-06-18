@@ -6,6 +6,10 @@ import ShowImage from "../Component/ShowImage";
 
 
 const Block = styled.div`
+    h2{
+        margin-bottom: 10px;
+        text-align: center;
+    }
     div{
         /* width: 100%; */
         ul{
@@ -28,11 +32,11 @@ const MyProject = ({data}) => {
                         return(
                                     <a href = {items.fields.url} target = "bank">
                                         <Block className="card">
+                                                <h2> {items.fields.name} </h2>
                                             <div>
                                                 <ShowImage  assetsId = {items.fields.image.sys.id}/>
                                             </div>
                                             <div>
-                                                <h2> {items.fields.name} </h2>
                                                 <div dangerouslySetInnerHTML={{__html: documentToHtmlString(items.fields.descriptions)}}></div>        
                                                 <div>
                                                     <h3>Tools</h3>
