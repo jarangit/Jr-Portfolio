@@ -6,6 +6,7 @@ const Img = styled.img`
     width: 100%;
 `
 
+
 const  ShowImage = (props) => {
     console.log(props.col1)
    
@@ -30,7 +31,7 @@ const  ShowImage = (props) => {
     }, []);    
     if (load) {
         return(
-          <div>
+          <div id = '1235654'>
               <Img src = {dataCol1.fields.file.url} />
           </div>
         )

@@ -14,6 +14,16 @@ const Block = styled.div`
 
   }
 `
+const BoxImg = styled.div`
+    width: 300px;
+    height: auto;
+    margin: 5px;
+`
+
+const SectionImg = styled.div`
+    display:flex;
+    flex-wrap:wrap;
+`
 function MyGalleryId(props) {
     console.log(props.data.fields)
     const { name, descriptions, col1} = props.data.fields
@@ -22,11 +32,15 @@ function MyGalleryId(props) {
           <div className ="container" >
                  <h1> {name} </h1>
                  <p> {descriptions} </p>
-                 <div>
+                 <SectionImg>
                    {col1.map(idCol1 => {
-                     return <ShowImage col1 ={idCol1.sys.id} />
+                     return (
+                       <BoxImg>
+                         <ShowImage col1 ={idCol1.sys.id} />
+                       </BoxImg>
+                     )
                    })}
-                 </div>
+                 </SectionImg>
           </div>
       </Layout>
     )

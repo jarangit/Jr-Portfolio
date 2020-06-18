@@ -37,7 +37,7 @@ const ListAlbum = (props) => {
                      <div  className = "card">
                         <Link href = '/MyGallery/[MyGalleryid]' as = {`/MyGallery/${items.sys.id}`} key = {items.sys.id} >
                              <a>
-                                <ShowImage col1 = {items.fields.thumbnail.sys.id}/>
+                                    <ShowImage col1 = {items.fields.thumbnail.sys.id}/>
                                     <div>
                                         <p>{items.fields.name}</p>
                                         <p> {items.fields.descriptions} </p>
