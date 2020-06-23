@@ -24,7 +24,7 @@ const Block = styled.div`
 `
 
 const MyProject = ({data}) => {
-    console.log(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/NyD1Y3lSNMwtKPdv96pwB?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
+    console.log(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/2bC9EzLHup7UVtZrMfhapK?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
     return(
         <Layout>
            <div className = "container" >

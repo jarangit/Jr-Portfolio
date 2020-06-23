@@ -14,6 +14,10 @@ const BoxItem = styled.div`
         text-decoration: none;
         margin: 10px;
         color: black;
+        :hover{
+            opacity:0.7;
+            transition: .5s ease;
+        }
         div{
             img{
                 width: 400px;
@@ -37,6 +41,8 @@ const BoxItem = styled.div`
 const Container = styled.div`
     position: relative;
     text-align: center;
+    opacity: 1;
+
 `
 const Text = styled.div`
     position: absolute;

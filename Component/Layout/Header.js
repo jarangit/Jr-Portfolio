@@ -8,6 +8,8 @@ const Container = styled.div`
     text-align: center;
     color: white;
     z-index:2;
+    height: 900px;
+    overflow:hidden;
 `
 const Text = styled.div`
     width: 30%;
