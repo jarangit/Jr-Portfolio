@@ -1,13 +1,6 @@
 import Layout from '../Component/Layout/Layout'
 import BoxItemHomePage from '../Component/Box/BoxItemHomePage'
 import Header from '../Component/Layout/Header'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
-import styled from 'styled-components'
-// const client = require('contentful').createClient({
-//   space: 'mhf3i20liehl',
-//   accessToken: 'EL8m-NzvxIwV3PlUd14_xYOrxihJuii6ONKvcJgIPCw'
-// })
 
 
 const Index = ({data}) => {
@@ -16,7 +9,7 @@ const Index = ({data}) => {
     <Layout>
       <div>
         <Header data = {data}  />
-        <BoxItemHomePage data = {data}/>
+        {/* <BoxItemHomePage/> */}
       </div>
     </Layout>
   )

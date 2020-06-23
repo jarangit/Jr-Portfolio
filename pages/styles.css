@@ -50,6 +50,15 @@ h1,h2,h3,h4,h5,h6, p {
     margin: 5px;
 
 }
+
+.each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+  }
 @media screen and (max-width : 900px){
     .container{
         padding: 5%;

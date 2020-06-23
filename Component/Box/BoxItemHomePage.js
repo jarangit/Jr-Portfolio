@@ -26,6 +26,7 @@ const BoxItem = styled.div`
         }
     }
     @media all and (max-width:500px){
+        display:none;
         margin: 10px;
         margin-bottom: 10px;
         a{
@@ -56,23 +57,23 @@ const Text = styled.div`
 `
 const BoxItemHomePage = () => {
 
-    const [data, setData] = useState([]);
-    const [load, setLoad] = useState(false);
-    const [error, setError] = useState('');
-    console.log(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/5FuZD0jTQjr1oukdZwVtk5?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
-      useEffect(() => {
-          axios.get(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/1dpD4I7KVFDQSBWOdy4J5A?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
-              .then(res => {
-                setData(res.data);
-                  setLoad(true);
-              })
-              .catch(err => {
-                  setError('No Data');
-                  setLoad(true)
-              })
-      }, []);
+    // const [data, setData] = useState([]);
+    // const [load, setLoad] = useState(false);
+    // const [error, setError] = useState('');
+    // console.log(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/5FuZD0jTQjr1oukdZwVtk5?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
+    //   useEffect(() => {
+    //       axios.get(`https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/assets/1dpD4I7KVFDQSBWOdy4J5A?access_token=${process.env.ACCESS_TOKEN}&content_type=myProject`)
+    //           .then(res => {
+    //             setData(res.data);
+    //               setLoad(true);
+    //           })
+    //           .catch(err => {
+    //               setError('No Data');
+    //               setLoad(true)
+    //           })
+    //   }, []);
 
-      console.log(data)
+    //   console.log(data)
 
     return(
         <BoxItem>

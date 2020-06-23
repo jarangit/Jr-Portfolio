@@ -2,7 +2,9 @@ import Layout from '../Component/Layout/Layout'
 import ShowImage from '../Component/ShowImage'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import styled from 'styled-components'
-
+import { useState } from 'react'
+import SlideShow from '../Component/SliderShow'
+// import BoxItemHomePage from '../Component/Box/BoxItemHomePage'
 
 const Block = styled.div`
     display: flex;
@@ -11,7 +13,7 @@ const Block = styled.div`
     justify-content: center;
 `
 const Flex1 = styled.div`
-    background:#bfbfbf;
+    background: rgb(191, 191, 191);
     width: 400px;
     div{
         padding: 20px;
@@ -33,8 +35,9 @@ const Flex2 = styled.div`
         width: 100%;
     }
 `
-const AboutPage = ({data}) => {
-console.log(data)
+
+  const AboutPage = ({data}) => {
+
     return(
         <Layout>
             <div className =''>
