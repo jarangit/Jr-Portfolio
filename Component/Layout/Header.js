@@ -8,8 +8,12 @@ const Container = styled.div`
     text-align: center;
     color: white;
     z-index:2;
-    height: 900px;
+    height: 700px;
     overflow:hidden;
+    @media all and (max-width: 900px){
+        height: auto;
+
+    }
 `
 const Text = styled.div`
     width: 30%;
