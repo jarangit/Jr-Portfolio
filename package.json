@@ -18,7 +18,7 @@
     "@fortawesome/react-fontawesome": "^0.1.10",
     "axios": "^0.19.2",
     "contentful": "^7.14.4",
-    "next": "^9.4.2",
+    "next": "^13.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-slideshow-image": "^1.5.3",
